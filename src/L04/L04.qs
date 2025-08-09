@@ -433,7 +433,17 @@ namespace MITRE.QSD.L04 {
     /// of regular old classical math and logic.
     function C04_SyndromeToIndex (syndrome : Result[]) : Int {
         // TODO
-        fail "Not implemented.";
+        mutable lol = -1;
+        if syndrome[0] == One {
+            lol += 4;
+        }
+        if syndrome[1] == One {
+            lol += 2;
+        }
+        if syndrome[2] == One {
+            lol += 1;
+        }
+        return lol;
     }
 
 
